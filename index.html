@@ -8,26 +8,29 @@
 </head>
 <body>
 
-<div class="content">
-    <h1 id="title">hairStayle webpage</h1>
-    <h2 id="secTitel">select the type of your hair</h2>
+<div id="top-announcement-bar">
+<span>🌸Find your perfect hair routine🌸</span>
 </div>
 
-<div class="main-wrapper"> 
-    <div class="square-container">
-        
-        <button id="square" onclick="toggleDropdown()">></button>
-
-<div id="myDropdown" class="dropdown-content">
+<div class="square-container" id="mainContainer">
+<div class="square">
 <button onclick="showSection('info')">straight</button>
+            
 <a href="info2.html">
-<button onclick="alert('curly')">curly</button>
-</a>         
- <a href="info.html">
-<button id="wavy" onclick="alert('wavy')">wavy</button>
- </a>
+<button onclick="showSection('curly')">curly</button>
+</a>      
+            
+<a href="info.html">
+<button id="wavy" onclick="showSection('wavy')">wavy</button>
+</a>
 </div>
-</div> </div> <script src="script.js"></script>
+</div>
 
+<div class="content">
+<h1 id="title">hairStayle webpage</h1>
+<h2 id="secTitel">select the type of your hair</h2>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
