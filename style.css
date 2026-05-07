@@ -120,13 +120,127 @@ text-underline-offset: 8px;
 text-decoration-thickness: 2px;
 transition: all 0.3s ease;
 }
-.natural{     
-    width: 200px;        
-    height: 200px;      
-    max-width: 100%;    
-    object-fit: cover;   
-    border-radius: 0px;  
-    margin-bottom: 20px;
-
+.natural1Cream{
+    width: 200px;       
+    height: 200px;    
+    object-fit: cover;
+    left: 5px;
+}
+.header-container {
+    display: flex;         
+    align-items: center;  
+    gap: 5px; 
 }
 
+.leaf {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    transform: scale(-1);  
+}
+a{
+    text-decoration: none; 
+    color: black;
+    font-weight: bold;
+    font-weight: 100;
+}
+a:hover{
+    font-weight: 1000;
+}
+.grid-container {
+ 
+    grid-template-columns: 300px 300px; 
+    gap: 20px; 
+    
+
+    justify-content: center; 
+    margin-top: 50px;
+}
+
+.curly {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.dry-curly-routine{
+    position: fixed;       
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    
+    width: 50px;
+    padding: 70px;
+    background-color: white;
+    border: 3px solid #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;       
+    z-index: 999;
+}
+.dry-curly:hover + .dry-curly-routine{
+    opacity: 1;
+    visibility: visible;
+
+}
+.dry-curly{
+    padding: 15px 25px;
+    background-color: #ffb6c1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 500;
+    display: none;
+}
+.dry-curly:hover ~ .dark-overlay,
+.dry-curly:hover ~ .dry-curly-routine {
+    opacity: 1;
+    visibility: visible;
+}
+.routine-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;            /* רוחב הריבוע */
+    max-width: 500px;
+    max-height: 80vh;      /* גובה מקסימלי (80% מהמסך) */
+    overflow-y: auto;      /* הוספת גלילה אם התוכן ארוך */
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.dark-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* חשוך ודהוי */
+    backdrop-filter: blur(5px);    /* טשטוש הרקע */
+    z-index: 500;
+}
+
+.close-btn {
+    float: left;
+    font-size: 28px;
+    cursor: pointer;
+}
